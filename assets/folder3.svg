@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1360" height="1157" viewBox="0 0 1360 1157" fill="none">
+  <title>folder-beige-1360x1157</title>
+  <defs>
+  <linearGradient id="beigeGrad" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#f4e7c8"/>
+    <stop offset="55%" stop-color="#eddfbd"/>
+    <stop offset="100%" stop-color="#e7d7ae"/>
+  </linearGradient>
+  <linearGradient id="beigeTab" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#f7e9c9"/>
+    <stop offset="100%" stop-color="#e7d5a9"/>
+  </linearGradient>
+</defs>
+  
+  <path d="M 1334.12 60.89 L 1322.62 57.85 L 1305.37 39.58 L 1293.87 12.18 L 1285.24 6.09 L 897.08 6.09 L 882.71 15.22 L 871.21 42.63 L 856.83 60.89 L 43.13 63.94 L 31.63 76.12 L 11.50 112.66 L 11.50 1144.82 L 235.77 1147.87 L 1345.62 1141.78 L 1348.50 922.56 L 1342.75 709.42 L 1342.75 298.38 Z" fill="url(#beigeGrad)"/>
+</svg>
