@@ -36,7 +36,7 @@ button { appearance: none; border: 0; font: inherit; }
 
 .background {
   z-index: -3;
-  background: url("assets/asset2.jpeg") center / cover no-repeat;
+  background: url("/assets/asset2.jpeg") center / cover no-repeat;
   filter: blur(7px) saturate(0.78);
   transform: scale(1.08);
   animation: settle 1.8s ease-out both;
