@@ -92,7 +92,7 @@ h1 em { color: var(--accent); font-weight: 600; }
   cursor: pointer;
   display: block;
   position: relative;
-  width: min(54vw, 310px);
+  width: min(400vw, 440px);
   aspect-ratio: 1.5 / 1;
   padding: 0;
   margin: clamp(2rem, 6vh, 4.5rem) auto 1.25rem;
@@ -105,16 +105,18 @@ h1 em { color: var(--accent); font-weight: 600; }
 
 .open-trigger:hover { transform: translateY(-8px) rotate(1deg); box-shadow: 0 36px 100px rgba(0,0,0,.5); }
 .open-trigger:focus-visible, .close-trigger:focus-visible, .replay:focus-visible { outline: 2px solid var(--accent); outline-offset: 7px; }
-.open-trigger img { width: 100%; height: 100%; display: block; object-fit: cover; position: relative; z-index: 1; }
+.open-trigger img { width: 100%; height: 100%; display: block; object-fit: cover; position: relative; z-index: 1; transition: opacity 450ms ease; }
+.open-trigger.is-image-changing img { opacity: 0; }
+.open-trigger.is-open-image img { object-fit: contain; padding: 4%; }
 .trigger-glow { position: absolute; inset: -14%; background: var(--accent); opacity: .2; filter: blur(35px); }
 .trigger-label { position: absolute; z-index: 2; left: 50%; bottom: 1rem; transform: translateX(-50%); color: white; font-size: .7rem; text-transform: uppercase; letter-spacing: .25em; text-shadow: 0 2px 8px #000; opacity: .9; }
 .hint { color: var(--muted); margin: 0; }
 
 .reveal { position: absolute; inset: 0; display: grid; place-items: center; padding: 6vh 6vw; opacity: 0; visibility: hidden; pointer-events: none; transform: scale(.96); transition: opacity 700ms ease, transform 900ms cubic-bezier(.16,1,.3,1), visibility 0s linear 1200ms; }
-.letter-frame { position: absolute; z-index: 1; width: min(76vw, 570px); filter: drop-shadow(0 30px 70px rgba(0,0,0,.55)); transform: scale(.72) translateY(10vh); opacity: 0; }
+.letter-frame { position: absolute; z-index: 1; width: min(82vw, 720px); filter: drop-shadow(0 30px 70px rgba(0,0,0,.45)); transform: scale(.72) translateY(10vh); opacity: 0; }
 .letter-frame img { display: block; width: 100%; max-height: 78svh; object-fit: contain; }
 .profile-card { position: relative; z-index: 2; display: grid; grid-template-columns: minmax(210px, .75fr) minmax(320px, 1fr); align-items: center; gap: clamp(2rem, 7vw, 7rem); width: min(90vw, 1040px); opacity: 0; pointer-events: none; }
-.profile-photo { position: relative; justify-self: center; width: min(30vw, 340px); min-width: 220px; aspect-ratio: .76; transform: translateX(-18vw) rotate(-7deg); opacity: 0; }
+.profile-photo { --photo-source-x: clamp(13rem, 29vw, 25rem); position: relative; justify-self: center; width: min(30vw, 340px); min-width: 220px; aspect-ratio: .76; transform: translateX(var(--photo-source-x)) translateY(2vh) rotate(-1deg) scale(.12); opacity: 0; transform-origin: center; }
 .profile-photo img { position: relative; z-index: 1; display: block; width: 100%; height: 100%; object-fit: cover; border-radius: 4px; box-shadow: 0 25px 80px rgba(0,0,0,.48); }
 .photo-shadow { position: absolute; inset: 9% -8% -8% 9%; background: var(--accent); opacity: .35; transform: rotate(7deg); }
 .profile-copy { max-width: 590px; transform: translateX(18vw); opacity: 0; }
@@ -129,12 +131,12 @@ h1 em { color: var(--accent); font-weight: 600; }
 .replay { position: absolute; bottom: 1.7rem; left: 2rem; border: 0; background: transparent; color: var(--muted); cursor: pointer; padding: .5rem; }
 .replay span { margin-left: .4rem; }
 
-.is-open .intro { filter: blur(10px); opacity: .45; transform: scale(.96); transition: filter 700ms ease, opacity 700ms ease, transform 700ms ease; }
+.is-open .intro { filter: blur(10px); opacity: 0; visibility: hidden; pointer-events: none; transform: scale(.96); transition: filter 700ms ease, opacity 700ms ease, transform 700ms ease, visibility 0s linear 700ms; }
 .is-open .background { filter: blur(12px) saturate(.65); transition: filter 700ms ease; }
 .is-open .reveal { opacity: 1; visibility: visible; pointer-events: auto; transform: scale(1); transition-delay: 250ms; }
-.is-open .letter-frame { animation: letter-opens 1.35s .15s cubic-bezier(.16,1,.3,1) forwards; }
+.is-open .letter-frame { animation: letter-opens 2.1s .15s cubic-bezier(.16,1,.3,1) forwards; }
 .is-open .profile-card { animation: profile-settle 1.1s 1.05s cubic-bezier(.16,1,.3,1) forwards; }
-.is-open .profile-photo { animation: photo-from-letter 1.2s 1.05s cubic-bezier(.16,1,.3,1) forwards; }
+.is-open .profile-photo { animation: photo-from-letter 1.65s .45s cubic-bezier(.16,1,.3,1) forwards; }
 .is-open .profile-copy { animation: copy-from-letter 1.1s 1.3s cubic-bezier(.16,1,.3,1) forwards; }
 .is-open .profile-copy > * { animation: text-reveal .7s cubic-bezier(.16,1,.3,1) both; }
 .is-open .profile-copy > :nth-child(1) { animation-delay: 1.55s; }
@@ -146,9 +148,9 @@ h1 em { color: var(--accent); font-weight: 600; }
 @keyframes rise { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes settle { from { opacity: 0; transform: scale(1.15); } to { opacity: 1; transform: scale(1.08); } }
 @keyframes letter-arrives { from { opacity: 0; transform: translateY(18vh) rotate(8deg) scale(.72); } to { opacity: 1; transform: translateY(0) rotate(0) scale(1); } }
-@keyframes letter-opens { 0% { opacity: 1; transform: scale(.72) translateY(10vh) rotate(-5deg); } 45% { opacity: 1; transform: scale(1.02) translateY(0) rotate(2deg); } 100% { opacity: 0; transform: scale(1.12) translateY(-3vh) rotate(0); } }
+@keyframes letter-opens { 0% { opacity: 1; transform: scale(.72) translateY(10vh) rotate(-5deg); } 34% { opacity: 1; transform: scale(1.02) translateY(0) rotate(2deg); } 68% { opacity: .58; transform: scale(1.14) translateY(-1vh) rotate(0); } 100% { opacity: .28; transform: scale(1.3) translateY(-2vh) rotate(0); } }
 @keyframes profile-settle { from { opacity: 0; transform: scale(.94); } to { opacity: 1; transform: scale(1); } }
-@keyframes photo-from-letter { from { opacity: 0; transform: translateX(-18vw) rotate(-7deg) scale(.7); } to { opacity: 1; transform: translateX(0) rotate(-3deg) scale(1); } }
+@keyframes photo-from-letter { 0% { opacity: 0; transform: translateX(var(--photo-source-x)) translateY(2vh) rotate(-1deg) scale(.12); } 18% { opacity: 1; } 58% { opacity: 1; transform: translateX(4vw) translateY(0) rotate(-5deg) scale(1.04); } 100% { opacity: 1; transform: translateX(0) translateY(0) rotate(-3deg) scale(1); } }
 @keyframes copy-from-letter { from { opacity: 0; transform: translateX(18vw); } to { opacity: 1; transform: translateX(0); } }
 @keyframes text-reveal { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
 
@@ -157,7 +159,7 @@ h1 em { color: var(--accent); font-weight: 600; }
   h1 { font-size: clamp(2.55rem, 13vw, 4.2rem); }
   .open-trigger { width: min(78vw, 330px); margin-top: 2.5rem; }
   .profile-card { grid-template-columns: 1fr; gap: 1.4rem; width: min(88vw, 440px); padding-bottom: 2rem; overflow-y: auto; max-height: 82svh; }
-  .profile-photo { width: min(58vw, 250px); min-width: 180px; }
+  .profile-photo { --photo-source-x: 0px; width: min(58vw, 250px); min-width: 180px; }
   .profile-copy { text-align: center; }
   .profile-copy h2 { font-size: clamp(2.2rem, 10vw, 3.4rem); }
   .profile-text { font-size: .83rem; line-height: 1.5; }
