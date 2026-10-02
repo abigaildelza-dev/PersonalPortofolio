@@ -15,7 +15,7 @@ const folderDetails = {
     title: 'Information',
     content: `
       <p class="modal-lead">Hi, I'm Delza Abigail Suryono.</p>
-      <p>A Computer Science student specializing in Software Engineering at BINUS University. Beyond technology, I am passionate about creativity, design, teaching, people, and turning ideas into meaningful experiences.</p>
+      <p>Not everything starts with a line of code. Some ideas begin with a question, a conversation, a sketch, or simply noticing that something could work differently. As a Software Engineering student at BINUS University, I’m interested in taking those beginnings and seeing where they can go.</p>
       <div class="detail-grid">
         <div><span>Education</span><strong>Bina Nusantara University Bekasi</strong><small>Computer Science - Software Engineering<br />July 2022 - Present</small></div>
         <div><span>Based in</span><strong>Bogor, Jawa Barat</strong><small>Open to meaningful collaborations and creative projects.</small></div>
@@ -67,7 +67,7 @@ const folderDetails = {
           <span class="tech-icon" tabindex="0" data-label="Cisco Packet Tracer"><img src="assets/icons8-cisco-packet-tracer-100.png" alt="Cisco Packet Tracer" /></span>
         </div></div>
         <div><span>People</span><p>Leadership, project management, time management, collaboration, presentation, adaptability, critical thinking</p></div>
-        <div><span>Language</span><p>Indonesian (Native), English (Intermediate), Mandarin (Elementary)</p></div>
+        <div><span>Language</span><p>Indonesian (Native), English (Advanced), Mandarin (Elementary)</p></div>
       </div>
     `
   }

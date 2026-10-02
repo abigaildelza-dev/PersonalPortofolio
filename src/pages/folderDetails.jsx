@@ -1,0 +1,92 @@
+export const folderDetails = {
+  information: {
+    kicker: 'The profile / 01',
+    title: 'Information',
+    deck: 'A little about the person behind the work.',
+    content: <><p className="modal-lead"><strong>Not everything starts with a line of code.</strong></p><p>Some ideas begin with a question, a conversation, a sketch, or simply noticing that something could work differently. As a Software Engineering student at BINUS University, I&rsquo;m interested in taking those beginnings and seeing where they can go.</p><div className="detail-grid"><div><span>Education</span><strong>Bina Nusantara University @Bekasi</strong><small>July 2022 - Present</small></div><div><span>Major</span><strong>Computer Science - Software Engineering</strong></div><div><span>GPA</span><strong>3.39</strong></div><div><span>Based in</span><strong>Bogor, Jawa Barat</strong></div></div><div className="social-links" aria-label="Social media links"><a className="social-link" href="https://github.com/abigaildelza-dev" target="_blank" rel="noreferrer" data-label="GitHub" aria-label="GitHub"><img src="assets/vecteezy_a-black-github-icon-in-a-circle_65742280.png" alt="" /></a><a className="social-link" href="https://www.linkedin.com/in/delza-abigail-suryono-897452360/" target="_blank" rel="noreferrer" data-label="LinkedIn" aria-label="LinkedIn"><img src="assets/linkedin-app-icon.png" alt="" /></a><a className="social-link" href="https://discord.com/users/980491156540498001" target="_blank" rel="noreferrer" data-label="Discord" aria-label="Discord"><img src="assets/vecteezy_discord-logo-icon-social-media-icon_23741066.png" alt="" /></a><a className="social-link" href="mailto:abigaildelza12@gmail.com" data-label="Gmail" aria-label="Gmail"><img src="assets/Gmail_Logo_512px.png" alt="" /></a></div></>,
+  },
+  experience: {
+    kicker: 'The practice / 02',
+    title: 'Experience',
+    deck: 'Selected collaborations, competitions, and work in progress.',
+    entries: [
+      {
+        kicker: 'HIMPI / NEXA',
+        title: 'UI/UX Design Competition HIMPI',
+        description: 'I joined the NEXA team to shape a smart-campus app concept around everyday student needs. I contributed to idea development, UI/UX design, and visual direction for features including a campus map, nearby-friend discovery, and an AI assistant. Working through the concept as a team helped me turn a broad problem into a clearer, more cohesive digital experience.',
+        cover: 'experience/himpi.jpeg',
+        coverAlt: 'NEXA team at the HIMPI UI/UX Design Competition',
+        link: 'https://student.binus.ac.id/bekasi/student-achievement/3rd-winner-ui-ux-design-himpi-universitas-bina-insan/',
+        gallery: [
+          { type: 'image', src: 'experience/himpi.jpeg', alt: 'NEXA team at the HIMPI UI/UX Design Competition' },
+          { type: 'image', src: 'Sertif.jfif', alt: 'HIMPI UI/UX Design Competition certificate' },
+        ],
+      },
+      {
+        kicker: 'TECHFEST 2025 / AIZETTE',
+        title: 'Techfest 2025 UI/UX Competition',
+        description: 'With the Aizette team, I explored an adaptive learning platform for students and teachers. I contributed ideas and UI/UX design for an experience built around visual, auditory, and kinesthetic learning preferences. The project gave me the chance to think about how personalization can guide learners toward a more comfortable way to study while keeping the product clear and approachable.',
+        coverVideo: 'experience/aizette.mp4',
+        coverAlt: 'Aizette adaptive learning interface showing learning styles',
+        gallery: [
+          { type: 'image', src: 'AIZETTE.png', alt: 'Aizette learning style selection screen' },
+          { type: 'image', src: 'AIZETTE2.png', alt: 'Aizette welcome screen' },
+          { type: 'image', src: 'AIZETTA3.png', alt: 'Aizette learning interface' },
+          { type: 'video', src: 'experience/aizette.mp4', alt: 'Techfest 2025 Aizette competition video' },
+        ],
+      },
+    ],
+  },
+  journey: {
+    kicker: 'The journey / 03',
+    title: 'Journey',
+    deck: 'Building experiences also means building communities.',
+    entries: [
+      {
+        kicker: '2025—2026 / STAMANARA',
+        title: 'Seni Tari Mahasiswa Bina Nusantara',
+        description: 'I grew with the BINUS student dance organization through several leadership roles, including Vice Head of Event Division, Human Resources Development Coordinator, Head of Event Division, and Project Manager. Across STAMANARA programs, I helped coordinate people, planning, and event details to bring each activity together.',
+        cover: 'stam.jfif',
+        coverAlt: 'Seni Tari Mahasiswa Bina Nusantara activity documentation',
+        gallery: [{ type: 'image', src: 'stam.jfif', alt: 'Seni Tari Mahasiswa Bina Nusantara activity documentation' }],
+      },
+      {
+        kicker: '2025—2026 / BINUS',
+        title: 'Freshmen Chaperone BINUS',
+        description: 'As a Freshman Leader and Freshman Partner, I guided new students through orientation, campus life, academic systems, and BINUS culture. The experience strengthened my ability to communicate clearly, support different people, and help newcomers feel more at home in a new environment.',
+        cover: 'freshmenchaperone.jfif',
+        coverAlt: 'Freshmen Chaperone BINUS orientation documentation',
+        gallery: [{ type: 'image', src: 'freshmenchaperone.jfif', alt: 'Freshmen Chaperone BINUS orientation documentation' }],
+      },
+      {
+        kicker: '2026—PRESENT / RUANGGURU',
+        title: 'Ruangguru English Academy',
+        description: 'I teach English to learners from kindergarten through adulthood, including students preparing for IELTS. I adapt lessons to different needs and learning styles, making space for students to build confidence and progress at a pace that works for them.',
+        coverText: 'English\nAcademy',
+        gallery: [{ type: 'text', title: 'Teaching English', description: 'English teacher for kindergarten to adult learners, including IELTS preparation. Lessons are adapted to different needs and learning styles.' }],
+      },
+      {
+        kicker: '2024 / BINUS',
+        title: 'Parents Day 2024 Volunteer',
+        description: 'I served in the Entrance and Department Mobilization Division, helping incoming students and their families move smoothly through the event. I managed crowd flow, guided guests to designated seating, and directed attendees to their department sessions so the schedule could stay on track.',
+        cover: 'parentsday.jfif',
+        coverAlt: 'Parents Day 2024 volunteer documentation',
+        gallery: [{ type: 'image', src: 'parentsday.jfif', alt: 'Parents Day 2024 volunteer documentation' }],
+      },
+      {
+        kicker: 'VOLUNTEER / TFI',
+        title: 'Teacher Volunteer TFI',
+        description: 'I worked directly with primary school students as a volunteer teacher, helping them build foundational skills in Mathematics and English. Through interactive lessons and one-to-one mentoring, I learned how patience and encouragement can make learning more approachable.',
+        cover: 'tfi.jfif',
+        coverAlt: 'TFI volunteer teaching documentation',
+        gallery: [{ type: 'image', src: 'tfi.jfif', alt: 'TFI volunteer teaching documentation' }],
+      },
+    ],
+  },
+  skills: {
+    kicker: 'The toolkit / 04',
+    title: 'Skills',
+    deck: 'A mix of design, technology, communication, and creative problem solving.',
+    content: <><p className="modal-lead">A mix of design, technology, communication, and creative problem solving.</p><div className="skill-groups"><div className="skill-focus"><span>Design</span><p>UI/UX design, wireframing, prototyping, design thinking, and visual development for intuitive, user-centered digital experiences.</p></div><div className="skill-focus"><span>Product Ideation &amp; UX Thinking</span><p>Turning user problems into meaningful product concepts, useful features, and cohesive user journeys.</p></div><div className="skill-focus"><span>Project &amp; Team Management</span><p>Coordinating teams, organizing project workflows, managing timelines, and supporting project execution.</p></div><div className="skill-focus"><span>Communication &amp; Collaboration</span><p>Sharing ideas clearly, collaborating across teams, mentoring others, and adapting to different audiences.</p></div><div className="skill-focus skill-focus--wide"><span>Skill Set</span><div className="skill-set-list" aria-label="Skill set"><span>Product Ideation</span><span>Critical Thinking</span><span>Project Planning</span><span>Team Coordination</span><span>Leadership</span><span>Event Management</span><span>Problem Solving</span><span>Adaptability</span><span>User Journey Mapping</span><span>Clear Communication</span><span>User-Centered Thinking</span><span>Public Speaking</span></div></div><div className="technology-group"><span>Technology</span><div className="tech-icons" aria-label="Technology skills">{[['HTML5.png', 'HTML5'], ['CSS3.png', 'CSS3'], ['Figma.png', 'Figma'], ['copilot-icon.png', 'GitHub Copilot'], ['office-365-icon.png', 'Microsoft Office 365'], ['canva-icon.png', 'Canva'], ['google-docs-icon.png', 'Google Docs'], ['icons8-cisco-packet-tracer-100.png', 'Cisco Packet Tracer']].map(([src, label]) => <span className="tech-icon" tabIndex="0" data-label={label} key={label}><img src={`assets/${src}`} alt={label} /></span>)}</div></div><div><span>People</span><p>Leadership, time management, collaboration, presentation, adaptability, critical thinking</p></div><div><span>Language</span><p>Indonesian (Native), English (Advanced), Mandarin (Elementary)</p></div></div></>,
+  },
+};
