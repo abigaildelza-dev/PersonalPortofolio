@@ -3,7 +3,25 @@ export const folderDetails = {
     kicker: 'The profile / 01',
     title: 'Information',
     deck: 'A little about the person behind the work.',
-    content: <><p className="modal-lead"><strong>Not everything starts with a line of code.</strong></p><p>Some ideas begin with a question, a conversation, a sketch, or simply noticing that something could work differently. As a Software Engineering student at BINUS University, I&rsquo;m interested in taking those beginnings and seeing where they can go.</p><div className="detail-grid"><div><span>Education</span><strong>Bina Nusantara University @Bekasi</strong><small>July 2022 - Present</small></div><div><span>Major</span><strong>Computer Science - Software Engineering</strong></div><div><span>GPA</span><strong>3.39</strong></div><div><span>Based in</span><strong>Bogor, Jawa Barat</strong></div></div><div className="social-links" aria-label="Social media links"><a className="social-link" href="https://github.com/abigaildelza-dev" target="_blank" rel="noreferrer" data-label="GitHub" aria-label="GitHub"><img src="assets/vecteezy_a-black-github-icon-in-a-circle_65742280.png" alt="" /></a><a className="social-link" href="https://www.linkedin.com/in/delza-abigail-suryono-897452360/" target="_blank" rel="noreferrer" data-label="LinkedIn" aria-label="LinkedIn"><img src="assets/linkedin-app-icon.png" alt="" /></a><a className="social-link" href="https://discord.com/users/980491156540498001" target="_blank" rel="noreferrer" data-label="Discord" aria-label="Discord"><img src="assets/vecteezy_discord-logo-icon-social-media-icon_23741066.png" alt="" /></a><a className="social-link" href="mailto:abigaildelza12@gmail.com" data-label="Gmail" aria-label="Gmail"><img src="assets/Gmail_Logo_512px.png" alt="" /></a></div></>,
+    content: <>
+      <p className="modal-lead"><strong>Not everything starts with a line of code.</strong></p>
+      <p>Some ideas begin with a question, a conversation, a sketch, or simply noticing that something could work differently. As a Software Engineering student at BINUS University, I&rsquo;m interested in taking those beginnings and seeing where they can go.</p>
+      <div className="detail-grid">
+        <div><span>Education</span><strong>Bina Nusantara University @Bekasi</strong><small>July 2024 - Present</small></div>
+        <div><span>Major</span><strong>Computer Science - Software Engineering</strong></div>
+        <div><span>GPA</span><strong>3.39</strong></div>
+        <div><span>Based in</span><strong>Bogor, Jawa Barat</strong></div>
+      </div>
+      <div className="information-actions-row">
+        <div className="social-links" aria-label="Social media links">
+          <a className="social-link" href="https://github.com/abigaildelza-dev" target="_blank" rel="noreferrer" data-label="GitHub" aria-label="GitHub"><img src="assets/vecteezy_a-black-github-icon-in-a-circle_65742280.png" alt="" /></a>
+          <a className="social-link" href="https://www.linkedin.com/in/delza-abigail-suryono-897452360/" target="_blank" rel="noreferrer" data-label="LinkedIn" aria-label="LinkedIn"><img src="assets/linkedin-app-icon.png" alt="" /></a>
+          <a className="social-link" href="https://discord.com/users/980491156540498001" target="_blank" rel="noreferrer" data-label="Discord" aria-label="Discord"><img src="assets/vecteezy_discord-logo-icon-social-media-icon_23741066.png" alt="" /></a>
+          <a className="social-link" href="mailto:abigaildelza12@gmail.com" data-label="Gmail" aria-label="Gmail"><img src="assets/Gmail_Logo_512px.png" alt="" /></a>
+        </div>
+        <a className="information-cv-download" href="/assets/DelzaAbigailSuryono_CV_Academy%2023.41.15.pdf" download="DelzaAbigailSuryono_CV_Academy 23.41.15.pdf"><span aria-hidden="true">↓</span> Download CV</a>
+      </div>
+    </>,
   },
   experience: {
     kicker: 'The practice / 02',
@@ -62,8 +80,9 @@ export const folderDetails = {
         kicker: '2026—PRESENT / RUANGGURU',
         title: 'Ruangguru English Academy',
         description: 'I teach English to learners from kindergarten through adulthood, including students preparing for IELTS. I adapt lessons to different needs and learning styles, making space for students to build confidence and progress at a pace that works for them.',
-        coverText: 'English\nAcademy',
-        gallery: [{ type: 'text', title: 'Teaching English', description: 'English teacher for kindergarten to adult learners, including IELTS preparation. Lessons are adapted to different needs and learning styles.' }],
+        coverVideo: 'EA.mp4',
+        coverAlt: 'English Academy teaching session',
+        gallery: [{ type: 'video', src: 'EA.mp4', alt: 'English Academy teaching session' }],
       },
       {
         kicker: '2024 / BINUS',
@@ -87,6 +106,17 @@ export const folderDetails = {
     kicker: 'The toolkit / 04',
     title: 'Skills',
     deck: 'A mix of design, technology, communication, and creative problem solving.',
-    content: <><p className="modal-lead">A mix of design, technology, communication, and creative problem solving.</p><div className="skill-groups"><div className="skill-focus"><span>Design</span><p>UI/UX design, wireframing, prototyping, design thinking, and visual development for intuitive, user-centered digital experiences.</p></div><div className="skill-focus"><span>Product Ideation &amp; UX Thinking</span><p>Turning user problems into meaningful product concepts, useful features, and cohesive user journeys.</p></div><div className="skill-focus"><span>Project &amp; Team Management</span><p>Coordinating teams, organizing project workflows, managing timelines, and supporting project execution.</p></div><div className="skill-focus"><span>Communication &amp; Collaboration</span><p>Sharing ideas clearly, collaborating across teams, mentoring others, and adapting to different audiences.</p></div><div className="skill-focus skill-focus--wide"><span>Skill Set</span><div className="skill-set-list" aria-label="Skill set"><span>Product Ideation</span><span>Critical Thinking</span><span>Project Planning</span><span>Team Coordination</span><span>Leadership</span><span>Event Management</span><span>Problem Solving</span><span>Adaptability</span><span>User Journey Mapping</span><span>Clear Communication</span><span>User-Centered Thinking</span><span>Public Speaking</span></div></div><div className="technology-group"><span>Technology</span><div className="tech-icons" aria-label="Technology skills">{[['HTML5.png', 'HTML5'], ['CSS3.png', 'CSS3'], ['Figma.png', 'Figma'], ['copilot-icon.png', 'GitHub Copilot'], ['office-365-icon.png', 'Microsoft Office 365'], ['canva-icon.png', 'Canva'], ['google-docs-icon.png', 'Google Docs'], ['icons8-cisco-packet-tracer-100.png', 'Cisco Packet Tracer']].map(([src, label]) => <span className="tech-icon" tabIndex="0" data-label={label} key={label}><img src={`assets/${src}`} alt={label} /></span>)}</div></div><div><span>People</span><p>Leadership, time management, collaboration, presentation, adaptability, critical thinking</p></div><div><span>Language</span><p>Indonesian (Native), English (Advanced), Mandarin (Elementary)</p></div></div></>,
+    content: <>
+      <div className="skill-groups">
+        <div className="skill-focus"><span>Design</span><p>UI/UX design, wireframing, prototyping, design thinking, and visual development for intuitive, user-centered digital experiences.</p></div>
+        <div className="skill-focus"><span>Product Ideation &amp; UX Thinking</span><p>Turning user problems into meaningful product concepts, useful features, and cohesive user journeys.</p></div>
+        <div className="skill-focus"><span>Project &amp; Team Management</span><p>Coordinating teams, organizing project workflows, managing timelines, and supporting project execution.</p></div>
+        <div className="skill-focus"><span>Communication &amp; Collaboration</span><p>Sharing ideas clearly, collaborating across teams, mentoring others, and adapting to different audiences.</p></div>
+        <div className="skill-focus skill-focus--wide"><span>Skill Set</span><div className="skill-set-list" aria-label="Skill set"><span>Product Ideation</span><span>Critical Thinking</span><span>Project Planning</span><span>Team Coordination</span><span>Leadership</span><span>Event Management</span><span>Problem Solving</span><span>Adaptability</span><span>User Journey Mapping</span><span>Clear Communication</span><span>User-Centered Thinking</span><span>Public Speaking</span></div></div>
+        <div className="technology-group"><span>Technology</span><div className="tech-icons" aria-label="Technology skills">{[['HTML5.png', 'HTML5'], ['CSS3.png', 'CSS3'], ['Figma.png', 'Figma'], ['copilot-icon.png', 'GitHub Copilot'], ['office-365-icon.png', 'Microsoft Office 365'], ['canva-icon.png', 'Canva'], ['google-docs-icon.png', 'Google Docs'], ['icons8-cisco-packet-tracer-100.png', 'Cisco Packet Tracer'], ['Selenium.png', 'Selenium'], ['VisualStudio.png', 'Visual Studio'], ['Git.png', 'Git'], ['Eclipse.png', 'Eclipse'], ['React.png', 'React'], ['NPM.png', 'npm'], ['Python.png', 'Python'], ['MySQL.png', 'MySQL'], ['Java.png', 'Java'], ['Docker.png', 'Docker'], ['C.png', 'C'], ['Streamlit.png', 'Streamlit']].map(([src, label], index, array) => <span className={`tech-icon${index >= array.length - 4 ? ' tech-icon--centered' : ''}`} tabIndex="0" data-label={label} key={label}><img src={`assets/${src}`} alt={label} /></span>)}</div></div>
+        <div><span>People</span><p>Leadership, time management, collaboration, presentation, adaptability, critical thinking</p></div>
+        <div><span>Language</span><p>Indonesian (Native), English (Advanced), Mandarin (Elementary)</p></div>
+      </div>
+    </>,
   },
 };

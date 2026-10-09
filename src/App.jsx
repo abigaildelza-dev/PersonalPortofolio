@@ -19,7 +19,7 @@ export default function App() {
   }, [page]);
 
   if (['skills', 'experience', 'information', 'journey'].includes(page)) return <EditorialPage section={page} onBack={() => setPage('connect')} />;
-  if (page === 'projects') return <ProjectsPage onBack={() => setPage('connect')} />;
+  if (page === 'projects') return <ProjectsPage onBack={() => setPage('connect')} onInformation={() => setPage('information')} />;
   return page === 'connect'
     ? <ConnectPage onBack={() => setPage('opening')} onProjects={() => setPage('projects')} />
     : <OpeningPage onConnect={() => setPage('connect')} />;
